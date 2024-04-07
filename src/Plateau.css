@@ -1,26 +1,38 @@
-/* Plateau.css */
 .plateau-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Utilise toute la hauteur de la fenêtre */
-  }
-  
-  .plateau {
-    display: grid;
-    grid-template-columns: repeat(12, 50px); /* 12 colonnes de 50px */
-    grid-template-rows: repeat(12, 50px); /* 12 lignes de 50px */
-  }
-  
-  .case {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #000; 
-    font-size: 12px; /* Taille de la police */
-    color: black; /* Couleur du texte *//* Bordure noire pour chaque case */
-  }
-  .selected {
-    background-color: yellow; /* Changer la couleur de fond pour le bloc sélectionné */
-  }
-  
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.plateau {
+  display: grid;
+  grid-template-columns: repeat(12, 50px);
+  grid-template-rows: repeat(12, 50px);
+}
+
+.case {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  font-size: 12px;
+  color: white;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+/* Couleur des blocs provenant du menu de gauche */
+
+/* Plateau.css */
+.rouge {
+  background-color: rgb(231, 48, 48);
+}
+
+.vert {
+  background-color: rgb(38, 205, 38);
+}
+
+
+
