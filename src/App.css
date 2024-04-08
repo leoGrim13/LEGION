@@ -20,7 +20,7 @@
 
 .plateau {
   flex-grow: 0;
-  background-color: antiquewhite; /* Ne pas faire grossir le plateau pour qu'il reste à sa taille naturelle */
+
 
 }
 .menu p {
