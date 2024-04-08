@@ -2,21 +2,34 @@ import React, { useState } from 'react';
 import './App.css';
 
 const Menu = ({ onBlockSelect }) => {
-  const [counter, setCounter] = useState(0);
+  const [counterOr, setCounterOr] = useState(0);
+  const [counterFerme, setCounterFerme] = useState(0);
 
   const handleBlockClick = (block) => {
     onBlockSelect(block);
   };
 
-  const handleIncrement = () => {
-    if (counter < 12) {
-      setCounter(counter + 1);
+  const handleIncrementOr = () => {
+    if (counterOr < 12) {
+      setCounterOr(counterOr + 1);
     }
   };
 
-  const handleDecrement = () => {
-    if (counter > 0) {
-      setCounter(counter - 1);
+  const handleDecrementOr = () => {
+    if (counterOr > 0) {
+      setCounterOr(counterOr - 1);
+    }
+  };
+
+  const handleIncrementFerme = () => {
+    if (counterFerme < 6) {
+      setCounterFerme(counterFerme + 1);
+    }
+  };
+
+  const handleDecrementFerme = () => {
+    if (counterFerme > 0) {
+      setCounterFerme(counterFerme - 1);
     }
   };
 
@@ -31,11 +44,19 @@ const Menu = ({ onBlockSelect }) => {
         ))}
       </div>
       <div className="counter-section">
-        <h4>OR :</h4>
+        <h4>OR</h4>
         <div className="counter-buttons">
-          <button onClick={handleDecrement}>-</button>
-          <p>{counter}</p>
-          <button onClick={handleIncrement}>+</button>
+          <button onClick={handleDecrementOr}>-</button>
+          <p>{counterOr}</p>
+          <button onClick={handleIncrementOr}>+</button>
+        </div>
+      </div>
+      <div className="counter-section">
+        <h4>FERME/max6/</h4>
+        <div className="counter-buttons">
+          <button onClick={handleDecrementFerme}>-</button>
+          <p>{counterFerme}</p>
+          <button onClick={handleIncrementFerme}>+</button>
         </div>
       </div>
     </div>
