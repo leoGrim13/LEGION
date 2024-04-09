@@ -5,17 +5,27 @@
   justify-content: center; /* Centrer horizontalement */
   align-items: center; /* Centrer verticalement */
   height: 10vh; /* Pleine hauteur de la vue */
+
 }
 
 .menu-gauche{
   color: red;
   margin-left: 30px;
 }
+.menu-droite{
+  color: rgb(0, 151, 35);
+  margin-left: 30px;
+}
 
 .menu-gauche,
 .menu-droite {
-  width: 20px; /* Largeur des menus */
-
+  width: 120px; /* Largeur des menus */
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: black;
+  margin-top: 10px;
 }
 
 .plateau {

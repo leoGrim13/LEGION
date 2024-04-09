@@ -33,7 +33,7 @@ const Menu = ({ onBlockSelect }) => {
     }
   };
 
-  const blocs = ['Chateau','Humain', 'Labo', 'Ecurie', 'Ferme', 'Archerie', 'Caserne', 'Cavalier', 'Archer', 'Lancier', 'catapulte'];
+  const blocs = ['CHATEAU','Humain', 'Ferme(1)', 'Ecurie(2)', 'Archerie(2)', 'Caserne(2)', 'Cavalier', 'Archer', 'Lancier', 'catapulte(4)','Labo(6)'];
 
   return (
     <div className="menu">

@@ -2,7 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
+  margin-left: 60px;
 }
 
 .plateau {
@@ -23,7 +24,6 @@
   background-color: yellow;
 }
 
-/* Couleur des blocs provenant du menu de gauche */
 
 /* Plateau.css */
 .rouge {
