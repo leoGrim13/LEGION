@@ -1,32 +1,23 @@
-import React, { useState } from 'react';
-import Plateau from './Plateau';
-import Menu from './Menu';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Game from './Game.js';
+import Elu from './Elu.js'; // Assurez-vous d'importer correctement le composant Elu
 import './App.css';
+import Room from './Room';
 
 const App = () => {
-  const [selectedBlock, setSelectedBlock] = useState(null);
-  const [menuType, setMenuType] = useState('');
-
-  const handleBlockSelect = (block, type) => {
-    setSelectedBlock(block);
-    setMenuType(type);
-  };
-
   return (
-    <div className="app">
-      <div className="menu-gauche">
-        <Menu onBlockSelect={(block) => handleBlockSelect(block, 'gauche')} />
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/elu" element={<Elu />} /> {/* Route vers la page Elu */}
+          <Route path="/game" element={<Game />} /> {/* Route vers la page de jeu */}
+          {/* Redirection vers la page Elu si l'utilisateur accède à la racine */}
+          <Route path="/" element={<Navigate to="/elu" />} />
+          <Route exact path="/room" component={Room} />
+        </Routes>
       </div>
-      <div className="plateau">
-        <Plateau
-          selectedBlock={selectedBlock}
-          menuType={menuType}
-        />
-      </div>
-      <div className="menu-droite">
-        <Menu onBlockSelect={(block) => handleBlockSelect(block, 'droite')} />
-      </div>
-    </div>
+    </Router>
   );
 };
 
